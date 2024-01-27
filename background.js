@@ -3,6 +3,7 @@ chrome.runtime.onInstalled.addListener(function() {
   });
   
   chrome.browserAction.onClicked.addListener(function() {
+    alert("Hey! You clicked the icon!");
     // Open your extension's window when the extension icon is clicked
     chrome.windows.create({
       url: "popup.html",

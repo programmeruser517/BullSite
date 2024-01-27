@@ -9,10 +9,6 @@
       "48": "images/logo_small.png",
       "128": "images/logo_small.png"
     },
-    "service_worker": {
-        "script": "background.js",
-        "persistent": false
-    },
     "action": {
       "default_icon": {
         "16": "images/logo_small.png",
@@ -25,7 +21,7 @@
     "permissions": ["scripting", "activeTab"],
     "web_accessible_resources": [
       {
-        "resources": ["popup.html", "main.css", "popup.js"],
+        "resources": ["popup.html", "main.css", "backgorund.js", "popup.js"],
         "matches": ["<all_urls>"]
       }
     ]

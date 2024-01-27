@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello World Extension</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BullSite</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <button id="clickMe">Click me!</button>
 
-  <script src="popup.js"></script>
+  <header>
+    <img src="images/logo_big.png" alt="Logo">
+    <label for="toggle-switch" class="toggle-label">On/Off Toggle</label>
+    <input type="checkbox" id="toggle-switch">
+  </header>
+
+  <section class="site-stats">
+    <h3>Site Statistics:</h3>
+    <div class="stat">
+      <span class="label">Safety:</span>
+      <span class="value">4/5</span>
+    </div>
+    <div class="stat">
+      <span class="label">Accuracy:</span>
+      <span class="value">4/5</span>
+    </div>
+    <div class="stat">
+      <span class="label">Policies/Tracking:</span>
+      <span class="value">1.5/5</span>
+    </div>
+    <div class="rating">
+      <span>Rating: X/10</span>
+    </div>
+  </section>
+
+  <section class="alternatives">
+    <h3>Click to see Alternatives</h3>
+  </section>
+
 </body>
 </html>
 
