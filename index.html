@@ -23,35 +23,10 @@
   <link rel="stylesheet" href="assets/css/glightbox.min.css" />
 
   <link rel="stylesheet" href="style.css" />
+  <script src="created_activity.js"></script>
 </head>
 
 <body>
-  <script>
-    function setColorAndRating() {
-      var ratingText = document.getElementById('rating_site_overall_avg_str');
-      var databaseOverallRating = 7.5; //TODO: Get from database, needs to be hardcoded
-      if (databaseOverallRating >= 8) {
-        ratingText.style.color = 'forest-green';
-        ratingText.innerHTML = "High Quality " + databaseOverallRating + '/10';
-      } else if (databaseOverallRating >= 5) {
-        ratingText.style.color = 'orange';
-        ratingText.innerHTML = "Medium Quality " + databaseOverallRating + '/10';
-      } else {
-        ratingText.style.color = 'red';
-        ratingText.innerHTML = "Bad Quality " + databaseOverallRating + '/10';
-      }
-    }
-
-    //===== Toggle Button
-    function fadeOutAndChangeText() {
-      var button = document.getElementById('on_button');
-      button.classList.add('fade-out'); // Apply fade-out class
-      setTimeout(function () {
-        button.innerHTML = '<img src="images/logo_small.png" alt="Logo" />'; // Change button text to show image
-      }, 500); // Wait for the fade-out transition to complete (500 milliseconds)
-    }
-
-  </script>
 
   <!--====== NAVBAR NINE PART START ======-->
 
@@ -123,12 +98,26 @@
             <br/>
             <br/>
             <h1>Site Rating:</h1>
-            <h2 id="rating_site_overall_avg_str" onload=""></h2>
-            <p>
-              Categories... [under construction]
-            </p>
+            <h2 id="rating_site_overall_avg_str"></h2>
+            <br/>
+            <h5 style="display: inline; color: white;">Safety</h5>
+            <div class="progress" style="display: inline;">
+              <div class="progress-bar" style="display: inline"></div>
+            </div>
+            <br/>
+            <br/>
+            <h5 style="text-align: center; display: inline; color: white;">Accuracy</h5>
+            <div class="progress" style="align-content: center; display: inline;">
+              <div class="progress-bar" style="display: inline"></div>
+            </div>
+            <br/>
+            <br/>
+            <h5 style="text-align: center; display: inline; color: white;">Security</h5>
+            <div class="progress" style="align-content: center; display: inline;">
+              <div class="progress-bar" style="display: inline"></div>
+            </div>
             <div class="button">
-              <a href="javascript:void(0)" class="btn primary-btn" id="on_button" onclick="fadeOutAndChangeText()">Activate</a>
+              <a href="javascript:void(0)" class="btn primary-btn" id="on_button" onclick="fadeOutAndChangeText()">Inactive</a>
               </a>
             </div>
           </div>
