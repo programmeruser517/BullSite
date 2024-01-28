@@ -16,12 +16,12 @@
         "48": "images/logo_small.png",
         "128": "images/logo_small.png"
       },
-      "default_popup": "popup.html"
+      "default_popup": "index.html"
     },
     "permissions": ["scripting", "activeTab"],
     "web_accessible_resources": [
       {
-        "resources": ["popup.html", "main.css", "backgorund.js", "popup.js"],
+        "resources": ["index.html", "main.css", "popup.js"],
         "matches": ["<all_urls>"]
       }
     ]

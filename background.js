@@ -1,3 +1,5 @@
+//FILE TO BE DELETED, REAL BACKGROUND CODE TBI in SCRIPT TAG IN POPUP.HTML
+
 chrome.runtime.onInstalled.addListener(function() {
     // Set up your extension when installed or updated
   });
