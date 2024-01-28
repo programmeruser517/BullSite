@@ -18,7 +18,7 @@
       },
       "default_popup": "index.html"
     },
-    "permissions": ["scripting", "activeTab"],
+    "permissions": ["scripting", "activeTab", "storage", "webRequest"],
     "web_accessible_resources": [
       {
         "resources": ["index.html", "main.css"],
