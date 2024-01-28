@@ -21,7 +21,7 @@
     "permissions": ["scripting", "activeTab"],
     "web_accessible_resources": [
       {
-        "resources": ["index.html", "main.css", "popup.js"],
+        "resources": ["index.html", "main.css"],
         "matches": ["<all_urls>"]
       }
     ]

@@ -2,7 +2,7 @@ function grabAndPrintWebsites() {
     //TODO: use google search api to get the top 3 websites related to website of current user
     //TODO: grabs and posts associated website ratings from database
     //current impl: hardcoded placeholders for website names and ratings
-    var websiteNames = ["www.google.com", "www.facebook.com", "www.youtube.com"];
+    var websiteNames = ["www.google.com", "www.facebook.com", "www.youtube.com", "www.nytimes.com"];
     var avgWebsiteRatings = [9.5, 8.5, 7.5];
     document.getElementById('option1').innerHTML = websiteNames[0];
     document.getElementById('option1').href = websiteNames[0];

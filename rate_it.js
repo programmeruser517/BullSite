@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('submit_button').addEventListener('click', formSubmitted);
     document.getElementById('alt_screen').addEventListener('click', changeWindowAlt);
     document.getElementById('rate_page').addEventListener('click', changeWindowRate);
-    document.getElementById('mental_wellness').addEventListener('click', displayMentRating);
+    document.getElementById('mental_wellness').addEventListener('input', displayMentRating);
     document.getElementById('appro').addEventListener('input', displayApproRating);
     document.getElementById('factAcc').addEventListener('input', displayFactRating);
     document.getElementById('rele_vance').addEventListener('input', displayReleRating);
