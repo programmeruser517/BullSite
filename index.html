@@ -24,6 +24,46 @@
 
   <link rel="stylesheet" href="style.css" />
   <script src="created_activity.js"></script>
+  <script>
+    // Sample database array
+    const database = [
+      ["https://www.nytimes.com", 8.5, 99.5, 9],
+      ["https://www.wsj.com", 8, 99.5, 8.8],
+      ["https://www.washingtonpost.com", 8, 8.59, 8.5],
+      ["https://membership.latimes.com", 7.5, 89, 8.2],
+      ["https://www.reuters.com", 8.5, 99.5, 9]
+    ];
+
+    // Sample URL to check
+    const urlToCheck = "https://www.nytimes.com";
+
+    // Function to check if the URL is in the database and update the popup.html
+    function checkAndSetVariables(url) {
+      // Find the index of the URL in the database
+      const index = database.findIndex(entry => entry[0] === url);
+
+      // If the URL is found in the database
+      if (index !== -1) {
+        // Set variables based on the values in the database for that URL
+        const safety = database[index][1];
+        const accuracy = database[index][2];
+        const security = database[index][3];
+        const average = (safety + accuracy + security) / 3;
+
+        // Update the popup.html elements with the new values
+        $('#safetyValue').text(safety + '/5');
+        $('#accuracyValue').text(accuracy + '/5');
+        $('#policiesValue').text(security + '/5');
+        $('#ratingValue').text(average.toFixed(1) + '/10');
+      } else {
+        // If the URL is not found in the database
+        console.log("URL not found in the database");
+      }
+    }
+
+    // Rest of your existing code...
+
+</script>
 </head>
 
 <body>
