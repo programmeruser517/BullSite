@@ -282,6 +282,11 @@ p {
   pointer-events: none;
 }
 
+.container {
+  text-align: center;
+  align-content: center;
+}
+
 .primary-btn-outline {
   border-color: var(--primary);
   color: var(--primary);
