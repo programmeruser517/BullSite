@@ -1,29 +1,38 @@
 {
-    "manifest_version": 3,
-    "name": "BullSite",
-    "description": "A chrome extension securing a truthful internet and dynamic tracking privacy for the people.",
-    "version": "1.0",
-    "icons": {
+  "manifest_version": 3,
+  "name": "BullSite",
+  "description": "A chrome extension securing a truthful internet and dynamic tracking privacy for the people.",
+  "version": "1.0",
+  "icons": {
+    "16": "images/logo_small.png",
+    "32": "images/logo_small.png",
+    "48": "images/logo_small.png",
+    "128": "images/logo_small.png"
+  },
+  "action": {
+    "default_icon": {
       "16": "images/logo_small.png",
       "32": "images/logo_small.png",
       "48": "images/logo_small.png",
       "128": "images/logo_small.png"
     },
-    "action": {
-      "default_icon": {
-        "16": "images/logo_small.png",
-        "32": "images/logo_small.png",
-        "48": "images/logo_small.png",
-        "128": "images/logo_small.png"
-      },
-      "default_popup": "index.html"
-    },
-    "permissions": ["scripting", "activeTab"],
-    "web_accessible_resources": [
-      {
-        "resources": ["index.html", "main.css"],
-        "matches": ["<all_urls>"]
-      }
-    ]
-  }
-  
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html", "main.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

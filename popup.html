@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <script src="popup.js"></script>
+  
   <header>
     <img src="images/logo_big.png" alt="Logo" style="height:150px; width:225px;">
     <label for="toggle-switch" class="toggle-label">On/Off Toggle</label>
@@ -33,24 +34,23 @@
     <h3>Site Statistics:</h3>
     <div class="stat">
       <span class="label">Safety:</span>
-      <span class="value">4/5</span>
+      <span class="value" id="safetyValue">-</span>
     </div>
     <div class="stat">
       <span class="label">Accuracy:</span>
-      <span class="value">4/5</span>
+      <span class="value" id="accuracyValue">-</span>
     </div>
     <div class="stat">
       <span class="label">Policies/Tracking:</span>
-      <span class="value">1.5/5</span>
+      <span class="value" id="policiesValue">-</span>
     </div>
     <div class="rating">
-      <span>Rating: X/10</span>
+      <span>Rating: <span id="ratingValue">-</span></span>
     </div>
   </section>
 
   <section class="alternatives">
     <h3>Click to see Alternatives</h3>
   </section>
-
 </body>
 </html>
