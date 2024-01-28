@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="assets/css/glightbox.min.css" />
 
   <link rel="stylesheet" href="style.css" />
-  <script src="created_activity.js"></script>
+  <script src="alt.js"></script>
 </head>
 
 <body>
@@ -48,10 +48,10 @@
             <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="page-scroll" href="#hero-area">Rate the Site!</a>
+                  <a class="page-scroll" id="rate_page" href="rate_it.html">Rate the Site!</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#services">Alternative Sites</a>
+                  <a class="page-scroll" id="alt_screen" href="index_alternative.html">Alternative Sites</a>
                 </li>
               </ul>
             </div>
@@ -103,28 +103,28 @@
             <section>
               <ul style="list-style: none; padding: 0; text-align: center; margin-top: 20px;">
                 <li style="margin-bottom: 20px;">
-                  <a href="lorem.com" target="_blank" style="color: #007bff; text-decoration: none;">.com</a> (9/10)
-                  <div class="progress" style="height: 10px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
-                    <div class="progress-bar" style="width: 90%; background-color: #007bff;"></div>
+                  <a href="" id="option1" target="_blank" style="color: #007bff; text-decoration: none;"></a> <p id="opt1Score" style="display: inline-block; color: black"></p>
+                  <div class="progress" style="height: 15px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
+                    <div class="progress-bar" id="opt1Prog" style="width: 25%; background-color: #007bff; height:10px;"></div>
                   </div>
                 </li>
                 <li style="margin-bottom: 20px;">
-                  <a href="ipsum.com" target="_blank" style="color: #007bff; text-decoration: none;">ipsum.com</a> (8/10)
-                  <div class="progress" style="height: 10px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
-                    <div class="progress-bar" style="width: 80%; background-color: #007bff;"></div>
+                  <a href="" id="option2" target="_blank" style="color: #007bff; text-decoration: none;"></a> <p id="opt2Score" style="display: inline-block; color: black"></p>
+                  <div class="progress" style="height: 16px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
+                    <div class="progress-bar" id="opt2Prog" style="width: 25%; background-color: #007bff; height:10px;"></div>
                   </div>
                 </li>
                 <li>
-                  <a href="lory.com" target="_blank" style="color: #007bff; text-decoration: none;">lory.com</a> (4/10)
-                  <div class="progress" style="height: 10px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
-                    <div class="progress-bar" style="width: 40%; background-color: #007bff;"></div>
+                  <a href="" id="option3" target="_blank" style="color: #007bff; text-decoration: none;"></a> <p id="opt3Score" style="display: inline-block; color: black"></p>
+                  <div class="progress" style="height: 15px; margin-top: 5px; background-color: #eee; border-radius: 5px; overflow: hidden; display: inline-block; width: 80%;">
+                    <div class="progress-bar" id="opt3Prog" style="width: 25%; background-color: #007bff; height:10px;"></div>
                   </div>
                 </li>
               </ul>
             </section>
-
+            <br/>
             <div class="button" style="text-align: center; margin-top: 20px;">
-              <a href="javascript:void(0)" class="btn primary-btn" id="on_button" onclick="fadeOutAndChangeText()">Return</a>
+              <a href="javascript:void(0)" class="btn primary-btn" id="on_button">Return</a>
             </div>
           </div>
         </div>
@@ -178,14 +178,6 @@
       overlayLeft.classList.add("open");
     });
 
-    //========= glightbox
-    GLightbox({
-      'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-      'type': 'video',
-      'source': 'youtube', //vimeo, youtube or local
-      'width': 900,
-      'autoplayVideos': true,
-    });
   </script>
 </body>
 

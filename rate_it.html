@@ -94,45 +94,47 @@
                         <br />
                         <br />
                         <header>
+                            <h2 style="color: white;">Review</h2>
                             <h2 style="color: white;">Site Information:</h2>
+                            <br/>
                                 <div class="slider-group">
-                                    <div class="slider-label">Mental Wellness:</div>
+                                    <div class="slider-label" style="display: inline-block;"><b>Mental Wellness:</b></div> <p id="label1" style="display: inline-block;"></p>
                                     <input id="mental_wellness" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <div class="slider-group">
-                                    <div class="slider-label">Appropriateness:</div>
-                                    <input type="range" min="0" max="10" step="1" value="5" class="styled-slider">
+                                    <div class="slider-label" style="display: inline-block;"><b>Appropriateness:</b></div> <p id="label2" style="display: inline-block;"><i></i></p>
+                                    <input id="appro" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <div class="slider-group">
-                                    <div class="slider-label">Factually Accurate:</div>
-                                    <input type="range" min="0" max="10" step="1" value="5" class="styled-slider">
+                                    <div class="slider-label" style="display: inline-block;"><b>Factually Accurate:</b></div> <p id="label3" style="display: inline-block;"><i></i></p>
+                                    <input id="factAcc" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <div class="slider-group">
-                                    <div class="slider-label">Relevance:</div>
-                                    <input type="range" min="0" max="10" step="1" value="5" class="styled-slider">
+                                    <div class="slider-label" style="display: inline-block;"><b>Relevance:</b></div> <p id="label4" style="display: inline-block;"><i></i></p>
+                                    <input id="rele_vance" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <div class="slider-group">
-                                    <div class="slider-label">Performance Speed:</div>
-                                    <input type="range" min="0" max="10" step="1" value="5" class="styled-slider">
+                                    <div class="slider-label" style="display: inline-block;"><b>Performance Speed:</b></div> <p id="label5" style="display: inline-block;"><i></i></p>
+                                    <input id="perf_speed" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <div class="slider-group">
-                                    <div class="slider-label">Low Tracking:</div>
-                                    <input type="range" min="0" max="10" step="1" value="5" class="styled-slider">
+                                    <div class="slider-label" style="display: inline-block;"><b>Low Tracking:</b></div> <p id="label6" style="display: inline-block;"><i></i></p>
+                                    <input id="low_track" type="range" min="0" max="10" step="1" value="5" class="styled-slider">
                                 </div>
 
                                 <!-- Repeat similar slider groups for other criteria -->
 
                                 <div class="button-group">
                                     <div class="button">
-                                        <a href="javascript:void(0)" class="btn primary-btn" id="return_button" onclick="fadeOutAndChangeText('Return')">Return</a>
+                                        <a href="javascript:void(0)" class="btn primary-btn" id="return_button">Return</a>
                                     </div>
                                     <div class="button">
-                                        <a href="javascript:void(0)" class="btn primary-btn" id="submit_button" onclick="fadeOutAndChangeText('Submit')">Submit</a>
+                                        <a href="javascript:void(0)" class="btn primary-btn" id="submit_button">Submit</a>
                                     </div>
                                 </div>
                             </div>
@@ -190,14 +192,6 @@
             overlayLeft.classList.add("open");
         });
 
-        // gLightbox
-        GLightbox({
-            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-            'type': 'video',
-            'source': 'youtube', // vimeo, youtube, or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
     </script>
 </body>
 
