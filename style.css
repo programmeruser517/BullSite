@@ -191,8 +191,8 @@ p {
 }
 
 .progress {
-  margin: 0 auto;
-  width: 150px;
+  margin: 0px;
+  width: 125px;
   padding: 4px;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 6px;
@@ -201,8 +201,7 @@ p {
 }
 
 .progress-bar {
-  height: 8px;
-  width: 15%;
+  width: 50%;
   border-radius: 4px;
   background-color: #86e01e;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
