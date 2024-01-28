@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="width:300px;">
 
 <head>
   <!--====== Required meta tags ======-->
@@ -26,6 +26,32 @@
 </head>
 
 <body>
+  <script>
+    function setColorAndRating() {
+      var ratingText = document.getElementById('rating_site_overall_avg_str');
+      var databaseOverallRating = 7.5; //TODO: Get from database, needs to be hardcoded
+      if (databaseOverallRating >= 8) {
+        ratingText.style.color = 'forest-green';
+        ratingText.innerHTML = "High Quality " + databaseOverallRating + '/10';
+      } else if (databaseOverallRating >= 5) {
+        ratingText.style.color = 'orange';
+        ratingText.innerHTML = "Medium Quality " + databaseOverallRating + '/10';
+      } else {
+        ratingText.style.color = 'red';
+        ratingText.innerHTML = "Bad Quality " + databaseOverallRating + '/10';
+      }
+    }
+
+    //===== Toggle Button
+    function fadeOutAndChangeText() {
+      var button = document.getElementById('on_button');
+      button.classList.add('fade-out'); // Apply fade-out class
+      setTimeout(function () {
+        button.innerHTML = '<img src="images/logo_small.png" alt="Logo" />'; // Change button text to show image
+      }, 500); // Wait for the fade-out transition to complete (500 milliseconds)
+    }
+
+  </script>
 
   <!--====== NAVBAR NINE PART START ======-->
 
@@ -35,7 +61,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
-              <img src="images/logo_big.png" style="height: 100px; width: 175px; border-radius: 15%;" alt="Logo" />
+              <img src="images/logo_big.png" style="height: 125px; width: 175px; border-radius: 15%;" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
               aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,36 +105,6 @@
       <div class="sidebar-logo">
         <a href="index.html"><img src="images/logo_big.png" alt="Logo" /></a>
       </div>
-      <p class="text">Lorem ipsum dolor sit amet adipisicing elit. Sapiente fuga nisi rerum iusto intro.</p>
-      <!-- logo -->
-      <div class="sidebar-menu">
-        <h5 class="menu-title">Quick Links</h5>
-        <ul>
-          <li><a href="javascript:void(0)">About Us</a></li>
-          <li><a href="javascript:void(0)">Our Team</a></li>
-          <li><a href="javascript:void(0)">Latest News</a></li>
-          <li><a href="javascript:void(0)">Contact Us</a></li>
-        </ul>
-      </div>
-      <!-- menu -->
-      <div class="sidebar-social align-items-center justify-content-center">
-        <h5 class="social-title">Follow Us On</h5>
-        <ul>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-youtube"></i></a>
-          </li>
-        </ul>
-      </div>
-      <!-- sidebar social -->
     </div>
     <!-- content -->
   </div>
@@ -126,26 +122,15 @@
             <br/>
             <br/>
             <br/>
-            <h1>Rating:</h1>
-            <h2 id="rating_site_overall_avg_str" style="color: forestgreen;">Good</h2>
+            <h1>Site Rating:</h1>
+            <h2 id="rating_site_overall_avg_str" onload=""></h2>
             <p>
-              Catagories... [under construction]
+              Categories... [under construction]
             </p>
             <div class="button">
-              <a href="javascript:void(0)" class="btn primary-btn">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
-                class="glightbox video-button">
-                <span class="btn icon-btn rounded-full">
-                  <i class="lni lni-play"></i>
-                </span>
-                <span class="text">Watch Intro</span>
+              <a href="javascript:void(0)" class="btn primary-btn" id="on_button" onclick="fadeOutAndChangeText()">Activate</a>
               </a>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="header-image">
-            <img src="assets/images/header/hero-image.jpg" alt="#" />
           </div>
         </div>
       </div>
@@ -170,8 +155,9 @@
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tiny-slider.js"></script>
+  <script src="popup.js"></script>
 
-  <script>
+<script>
 
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(
