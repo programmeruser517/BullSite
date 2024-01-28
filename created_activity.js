@@ -38,8 +38,13 @@ function changeWindowAlt() {
   window.location.href = "index_alternative.html";
 }
 
+function changeWindowRate() {
+  window.location.href = "rate_it.html"
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     setColorAndRating();
     document.getElementById('on_button').addEventListener('click', fadeOutAndChangeText);
     document.getElementById('alt_screen').addEventListener('click', changeWindowAlt);
+    document.getElementById('rate_page').addEventListener('click', changeWindowRate);
 });

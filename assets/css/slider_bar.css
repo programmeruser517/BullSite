@@ -1,0 +1,40 @@
+.site-information {
+    background-color: #333; 
+    padding: 20px;
+}
+
+.slider-group {
+    margin-bottom: 15px;
+}
+
+.slider-label {
+    margin-bottom: 5px;
+}
+
+.styled-slider {
+    width: 100%;
+    background: #ddd; 
+    border: none;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.styled-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 48%; 
+}
