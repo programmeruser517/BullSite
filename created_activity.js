@@ -34,7 +34,12 @@ function fadeOutAndChangeText() {
   
 }
 
+function changeWindowAlt() {
+  window.location.href = "index_alternative.html";
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     setColorAndRating();
     document.getElementById('on_button').addEventListener('click', fadeOutAndChangeText);
+    document.getElementById('alt_screen').addEventListener('click', changeWindowAlt);
 });
