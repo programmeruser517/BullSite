@@ -15,6 +15,20 @@ function setColorAndRating() {
   }
 }
 
+function loadPageInfo() {
+  //variables will store data computed from database
+  var safetyRating = 7.5;
+  var accuracyRating = 7.5;
+  var securityRating = 7.5;
+
+  document.getElementById('safety_dis').innerHTML = safetyRating + '/10';
+  document.getElementById('safety_prog_bar').style.width = safetyRating * 10 + '%';
+  document.getElementById('accuracy_dis').innerHTML = accuracyRating + '/10';
+  document.getElementById('accuracy_prog_bar').style.width = accuracyRating * 10 + '%';
+  document.getElementById('security_dis').innerHTML = securityRating + '/10';
+  document.getElementById('security_prog_bar').style.width = securityRating * 10 + '%';
+}
+
 //===== Toggle Button
 function fadeOutAndChangeText() {
   var button = document.getElementById('on_button');
@@ -40,6 +54,7 @@ function changeWindowAlt() {
 
 document.addEventListener('DOMContentLoaded', function() {
     setColorAndRating();
+    loadPageInfo();
     document.getElementById('on_button').addEventListener('click', fadeOutAndChangeText);
     document.getElementById('alt_screen').addEventListener('click', changeWindowAlt);
 });
