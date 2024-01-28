@@ -1,7 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    /* padding was 0 */
     padding: 20px;
+    margin: 0;
+    text-align: center;
   }
   
   button {
@@ -10,3 +13,18 @@ body {
     cursor: pointer;
   }
   
+  #toggleButton {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  /* button is red when it is turned off */
+  
+  #toggleButton.on {
+    background-color: transparent;
+    background-image: url('images/logo.png'); /* Replace with your logo path */
+    background-size: cover;
+    /* button gets turned into our logo png, which signifies that its on. */
+  }   
