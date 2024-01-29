@@ -18,10 +18,10 @@
       },
       "default_popup": "index.html"
     },
-    "permissions": ["scripting", "activeTab", "storage", "webRequest"],
+    "permissions": ["scripting", "activeTab", "storage", "webRequest", "tabs"],
     "web_accessible_resources": [
       {
-        "resources": ["index.html", "main.css"],
+        "resources": ["index.html", "style.css", "created_activity.js"],
         "matches": ["<all_urls>"]
       }
     ]

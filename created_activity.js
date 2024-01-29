@@ -1,15 +1,34 @@
 const database = [
-  ["https://www.nytimes.com", 8.5, 9.5, 9],
-  ["https://www.wsj.com", 8, 99.5, 8.8],
-  ["https://www.washingtonpost.com", 8, 8.59, 8.5],
-  ["https://membership.latimes.com", 7.5, 89, 8.2],
-  ["https://www.reuters.com", 3, 2, 0]
+  ["https://www.nytimes.com/", 8.5, 9.5, 9],
+  ["https://www.wsj.com/", 8, 99.5, 8.8],
+  ["https://www.washingtonpost.com/", 8, 8.59, 8.5],
+  ["https://membership.latimes.com/", 7.5, 89, 8.2],
+  ["https://www.reuters.com/", 3, 2, 0]
 ];
 
-const urlToCheck = ("https://www.reuters.com");
+function generateURL() {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    var currentUrl = tabs[0].url;
+    return currentUrl;
+  });
+}
 
+var urlToCheck = (generateURL());
 var isOn = false;
-var index = -1; // Added index initialization
+console.log(urlToCheck);
+console.log(database[0][0]);
+//index initialization
+for (var i = 0; i < database.length; i++) {
+  if (String(database[i][0]) == String(urlToCheck)) {
+    var index = i;
+    break;
+  }
+  else {
+    var index = -1;
+  }
+}
+
+console.log(index);
 
 //algorithm for blocking ads on basic level, upon user's request
 
@@ -62,7 +81,6 @@ function turnOn() {
     
     }
 }
-
 
 function setColorAndRating() {
   if (index !== -1) {
@@ -126,7 +144,7 @@ function fadeOutAndChangeText() {
 
   setTimeout(function () {
     if (isOn == false) {
-      button.innerHTML = '<img src="images/logo_small.png" style="height:30px; width:65px" alt="Logo" /> Active'; // Change button text to show image
+      button.innerHTML = '<img src="images/logo_small.png" style="height:30px; width:35px" alt="Logo" /> Active'; // Change button text to show image
       isOn = true;
     } else {
       button.innerHTML = 'Inactive'; // Change button text to show text
